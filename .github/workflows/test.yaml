@@ -26,7 +26,7 @@ jobs:
         token_format: 'access_token'
         workload_identity_provider: projects/828614594239/locations/global/workloadIdentityPools/wif-pool/providers/github-provider
         service_account: 'github-service-account@amazing-source-396109.iam.gserviceaccount.com'
-        audience: 'https://github.com/Taewoogit/releng'
+        audience: 'https://github.com/Taewoogit/spring-petclinic-helm'
 
     # Set up gcloud CLI environment
     - name: Set up Google Cloud SDK
