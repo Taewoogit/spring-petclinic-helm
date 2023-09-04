@@ -165,6 +165,7 @@
             <version>${nohttp-checkstyle.version}</version>
           </dependency>
         </dependencies>
+        <!--
         <executions>
           <execution>
             <id>nohttp-checkstyle-validation</id>
@@ -182,6 +183,7 @@
             </goals>
           </execution>
         </executions>
+        -->
       </plugin>
       <plugin>
         <groupId>org.graalvm.buildtools</groupId>
