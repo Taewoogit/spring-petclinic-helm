@@ -165,7 +165,6 @@
             <version>${nohttp-checkstyle.version}</version>
           </dependency>
         </dependencies>
-        <!--
         <executions>
           <execution>
             <id>nohttp-checkstyle-validation</id>
@@ -183,7 +182,6 @@
             </goals>
           </execution>
         </executions>
-        -->
       </plugin>
       <plugin>
         <groupId>org.graalvm.buildtools</groupId>
@@ -192,6 +190,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.0.4</version>
         <executions>
           <execution>
             <!-- Spring Boot Actuator displays build-related information
