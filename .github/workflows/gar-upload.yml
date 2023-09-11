@@ -28,10 +28,9 @@ jobs:
           distribution: 'adopt'
           cache: maven
           
-      - name: Build with Maven Wrapper
-        run: |
-          cd petclinic
-          mvn -B package
+      - name: Build with Maven
+        run: mvn -B spring-javaformat:apply package --file pom.xml -Djacoco.skip=true -Dsurefire.useFile=false -DdisableXmlReport=true
+
 
       - name: Store the current repository
         uses: actions/upload-artifact@v3
