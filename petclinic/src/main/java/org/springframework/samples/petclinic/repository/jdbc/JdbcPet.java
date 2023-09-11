@@ -13,36 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.model;
+package org.springframework.samples.petclinic.repository.jdbc;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
-
+import org.springframework.samples.petclinic.model.Pet;
 
 /**
- * Simple JavaBean domain object adds a name property to <code>BaseEntity</code>. Used as a base class for objects
- * needing these properties.
+ * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implementation of the
+ * PetRepository.
  *
- * @author Ken Krebs
  * @author Juergen Hoeller
  */
-@MappedSuperclass
-public class NamedEntity extends BaseEntity {
+class JdbcPet extends Pet {
 
-    @Column(name = "name")
-    private String name;
+    private int typeId;
 
-    public String getName() {
-        return this.name;
+    private int ownerId;
+
+    public int getTypeId() {
+        return this.typeId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
     }
 
-    @Override
-    public String toString() {
-        return this.getName();
+    public int getOwnerId() {
+        return this.ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
     }
 
 }
